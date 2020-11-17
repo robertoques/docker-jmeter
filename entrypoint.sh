@@ -12,15 +12,9 @@ export JVM_ARGS="-Xmn${n}m -Xms${s}m -Xmx${x}m"
 echo "START Running Jmeter on `date`"
 
 echo "JVM_ARGS=${JVM_ARGS}"
-export TARGET_HOST=$TARGET_HOST
-echo ${TARGET_HOST}
-echo $TARGET_HOST
 
-env
+wget $URL_JMX -O /tmp/plan.jmx
 
-jmeter -Dlog_level.jmeter=DEBUG \
-	-JTARGET_HOST=${TARGET_HOST} -JTARGET_PORT=${TARGET_PORT} \
-	-JTARGET_PATH=${TARGET_PATH} -JTARGET_KEYWORD=${TARGET_KEYWORD} -JTHREADS=${TARGET_THREADS} \
-	-n -t /plan.jmx -l /tmp/test-plan.jtl -j /tmp/jmeter.log 
+jmeter -Dlog_level.jmeter=DEBUG -JTARGET_HOST=${TARGET_HOST} -JTARGET_PORT=${TARGET_PORT} -JTARGET_PATH=${TARGET_PATH} -JTARGET_KEYWORD=${TARGET_KEYWORD} -JTHREADS=${TARGET_THREADS} -n -t /tmp/plan.jmx -l /tmp/test-plan.jtl -j /tmp/jmeter.log 
 
 echo "END Running Jmeter on `date`"

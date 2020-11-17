@@ -1,0 +1,89 @@
+{
+    "capacityProviderStrategy": [
+        {
+            "capacityProvider": "",
+            "weight": 0,
+            "base": 0
+        }
+    ],
+    "cluster": final"",
+    "count": 10,
+    "enableECSManagedTags": true,
+    "group": "cli",
+    "launchType": "FARGATE",
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-04502cd950d01795f"
+            ],
+            "securityGroups": [
+                "sg-05e3b726eccc560ba"
+            ],
+            "assignPublicIp": "ENABLED"
+        }
+    },
+    "overrides": {
+        "containerOverrides": [
+            {
+                "name": "",
+                "command": [
+                    ""
+                ],
+                "environment": [
+                    {
+                        "name": "",
+                        "value": ""
+                    }
+                ],
+                "environmentFiles": [
+                    {
+                        "value": "",
+                        "type": "s3"
+                    }
+                ],
+                "cpu": 0,
+                "memory": 0,
+                "memoryReservation": 0,
+                "resourceRequirements": [
+                    {
+                        "value": "",
+                        "type": "GPU"
+                    }
+                ]
+            }
+        ],
+        "cpu": "",
+        "inferenceAcceleratorOverrides": [
+            {
+                "deviceName": "",
+                "deviceType": ""
+            }
+        ],
+        "executionRoleArn": "",
+        "memory": "",
+        "taskRoleArn": ""
+    },
+    "placementConstraints": [
+        {
+            "type": "memberOf",
+            "expression": ""
+        }
+    ],
+    "placementStrategy": [
+        {
+            "type": "random",
+            "field": ""
+        }
+    ],
+    "platformVersion": "LATEST",
+    "propagateTags": "SERVICE",
+    "referenceId": "",
+    "startedBy": "",
+    "tags": [
+        {
+            "key": "",
+            "value": ""
+        }
+    ],
+    "taskDefinition": "DDOS:1"
+}

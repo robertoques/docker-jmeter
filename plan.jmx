@@ -106,7 +106,7 @@ Connect to 5s</stringProp>
           <collectionProp name="Arguments.arguments">
             <elementProp name="TARGET_HOST" elementType="Argument">
               <stringProp name="Argument.name">TARGET_HOST</stringProp>
-              <stringProp name="Argument.value">${__P(TARGET_HOST,sec.rober.xyz)}</stringProp>
+              <stringProp name="Argument.value">${__P(TARGET_HOST,45.79.172.103)}</stringProp>
               <stringProp name="Argument.desc">target server domain/IP for testing</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
@@ -130,7 +130,7 @@ Connect to 5s</stringProp>
             </elementProp>
             <elementProp name="THREADS" elementType="Argument">
               <stringProp name="Argument.name">THREADS</stringProp>
-              <stringProp name="Argument.value">${__P(THREADS,100)}</stringProp>
+              <stringProp name="Argument.value">${__P(THREADS,3000)}</stringProp>
               <stringProp name="Argument.desc">Number of concurrent threads</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>

@@ -19,6 +19,7 @@ ARG TZ="Europe/Amsterdam"
 RUN    apk update \
 	&& apk upgrade \
 	&& apk add ca-certificates \
+	&& apk add wget \
 	&& update-ca-certificates \
 	&& apk add --update openjdk8-jre tzdata curl unzip bash \
 	&& apk add --no-cache nss \
